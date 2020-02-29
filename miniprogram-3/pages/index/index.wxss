@@ -1,0 +1,20 @@
+/**index.wxss**/
+Page{
+  text-align: center;
+
+}
+
+.title {
+  font-size: 18px;
+  line-height: 4;
+  font-weight: bold;
+}
+
+.body{
+  text-align: left;
+  font-size: 15px;
+}
+
+.onStart {
+  margin: 20px
+}
