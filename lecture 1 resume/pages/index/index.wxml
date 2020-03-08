@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="title"> 这里是刘文韬的个人简历。</view>
+<cover-image mode = "widthFix" src="../../image/goodboy.jpg">
+</cover-image>
+<!--button bindtap="onStart">开始浏览</button-->
+
+<text class=""title>基本资料</text>
+<view class="body">
+<view>姓名：刘文韬&nbsp&nbsp&nbsp性别：男</view>
+</view>
+
+<text class="title">学习经历</text>
+<view class="body">
+<view>就读院校：北京语言大学高级翻译学院</view>
+<view>主修专业：翻译（本地化）</view>
+<view>辅修专业：汉语国际教育</view>
+<view>预计毕业时间：2020.6</view></view>
+
+<text class="title">联系方式</text>
+<view class="body">
+<view>手机：152xxxx2323</view>
+<view>微信：William980411</view>
+<view>QQ：412926502</view>
+<view>电子邮箱：lsk6577#qq.com</view></view>
+
+<text class="title">求职意向</text>
+<view class="body">
+<view>期望行业：翻译与本地化、语言类</view>
+<view>期望工作地点：北京、上海等一二线城市</view>
+<view>期望职位：面议</view>
+<view>期望薪资：实习工作不低于150元/小时，正式工作税后月薪不少于9k</view>
+<view>工作性质：实习/全职</view>
+<view></view></view>
