@@ -1,0 +1,39 @@
+
+<!--handbook.wxml-->
+<import src="../../common/foot.wxml" />
+<view class="container">
+  <view class="page-head">
+    <view class="page-head-desc">本次活动共计花费{{ sum }}元，个人花费{{persum}}元。
+    </view>
+    <view class="page-head-line"></view>
+  </view>
+  <view class="page-body">
+    <view class="index-bd">
+      <view class="timeline" wx:for="{{sublist}}" wx:key="id">
+        <view class="timeline_tmicon">{{index+1}}</view>
+        <view class=" touch-main {{item.isTouchMove ? 'touch-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+          <view class="touch-content">
+            <navigator url="../detail/detail?mainindex={{mainindex}}&subindex={{ index }}&act=edit" class="timeline_tmlabel">
+              <view class="navigator-text1">{{typearray[item.typeindex]}}</view>
+              <view class="navigator-time">{{item.date}}</view>
+              <view class="navigator-text2">{{item.subtitle}}：共花费 {{item.cost}}元</view>
+              <view class="navigator-text3">{{item.location.name}}</view>
+            </navigator>
+          </view>
+          <view class="touch-hide" catchtap="del" data-index="{{index}}">删除</view>
+        </view>
+      </view>
+    </view>
+    <view>
+      <navigator url="../detail/detail?mainindex={{mainindex}}&act=new" hover-class="navigator-hover">
+        <image class="float-action2" src="../../common/icon/add.png"></image>
+      </navigator>
+    </view>
+    <view>
+      <navigator url="../statistics/statistics?mainindex={{mainindex}}" hover-class="navigator-hover">
+        <image class="float-action" src="../../common/icon/statistics.png"></image>
+      </navigator>
+    </view>
+  </view>
+  <template is="foot" />
+</view>
