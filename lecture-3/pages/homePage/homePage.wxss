@@ -1,0 +1,78 @@
+/* pages/homePage/homePage.wxss */
+// homePage.wxss
+/*顶部分类栏目*/
+.topTabBarClass {
+   background-color: #B49082;
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   height: 80rpx;
+}
+/*类型选择 默认样式*/
+.topTypeListClass {
+   display: inline-block;
+   margin-top: 12rpx;
+   margin-left: 10rpx;
+   font-size: 30rpx;
+   width: 100rpx;
+   height: 100%;
+   text-align: center;
+   z-index: 99;
+   color: #333;
+}
+/*类型选择 选中样式*/
+   .curPage {
+   animation-fill-mode: forwards;
+   color: #B49082;
+   font-size: 35rpx;
+}
+/*右侧添加按钮背景视图样式*/
+   .rightview {
+   background-color:transparent;
+   height: 100%;
+   width: 10%;
+   position: relative;
+}
+/*右侧添加按钮样式*/
+.addImage {
+   position: absolute;
+   width: 40rpx;
+   height: 40rpx;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+}
+/*cell样式*/
+.cellClass {
+   width: 100%;
+   box-sizing: border-box;
+   padding:20rpx;
+   background: white;
+   border-bottom: 1rpx solid darkgray;
+}
+/*评论时间栏目 样式*/
+.cellbottomClass {
+   width: 100%;
+   height: 44rpx;
+   background-color: transparent;
+   color: #dddddd;
+   font-size: 30rpx;
+   margin-top: 10rpx;
+   margin-left: 10rpx;
+}
+/*图片容器视图样式*/
+   .imageClass {
+   width: 100%;
+   flex-direction: row;
+   display: flex;
+   height: 150rpx;
+   background-color: transparent;
+   justify-content: space-around;
+}
+/*图片样式*/
+   .imageshow {
+   width: 180rpx;
+   height: 150rpx;
+}

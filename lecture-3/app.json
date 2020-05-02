@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/homePage/homePage",
+    "pages/attention/attention",
+    "pages/userCenter/userCenter",
+    "pages/video/video"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#B49082",
+    "navigationBarTitleText": "新闻",
+    "backgroundColor": "#87CEFA",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#E1FFFF",
+    "selectedColor": "#B49082",
+    "backgroundColor": "#87CEFA",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/homePage/homePage",
+        "iconPath": "imges/TabbarHomeN.png",
+        "selectedIconPath": "imges/TabbarHomeN1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "iconPath": "imges/TabbarVideoN.png",
+        "selectedIconPath": "imges/TabbarVideoN1.png",
+        "text": "视频"
+      },
+      {
+        "pagePath": "pages/attention/attention",
+        "iconPath": "imges/TabbarActrN.png",
+        "selectedIconPath": "imges/TabbarActrN1.png",
+        "text": "关注"
+      },
+      {
+        "pagePath": "pages/userCenter/userCenter",
+        "iconPath": "imges/TabbarUserN.png",
+        "selectedIconPath": "imges/TabbarUserN1.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation":"sitemap.json"
+}

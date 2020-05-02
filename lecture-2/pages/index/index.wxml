@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+<view wx:for="{{chapters}}">{{item}}</view>
+<block wx:if="{{bookInfo==true}}">
+<view>作者:  [英] 阿瑟·柯南·道尔 </view>
+<view>出版社: 天津人民出版社</view>
+<view>出版年: 2014-9-1</view>
+<view>页数: 1412</view>
+<view>定价: CNY 56.00</view>
+<view>装帧: 平装</view>
+<view>ISBN: 9787201088471</view>
+</block>

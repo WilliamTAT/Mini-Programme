@@ -1,0 +1,53 @@
+<!--pages/homePage/homePage.wxml-->
+<view class="mainViewClass">
+  <!--加载动画-->
+  <loading hidden="{{loading}}">
+    加载中...
+  </loading>
+  <!--顶部 分类栏目-->
+  <view class="topTabBarClass">
+
+    <!--类型 滚动视图-->
+    <scroll-view scroll-x="true" style="width: 90%;height: 100%; white-space: nowrap;display: flex">
+      <block wx:for="{{tArray}}">
+        <view animation="{{animation}}" class="topTypeListClass {{index==curpage?'curPage':''}}" bindtap="typeClick" id="{{index}}" data-idx="{{item.category}}">
+          {{item.name}}
+        </view>
+      </block>
+    </scroll-view>
+
+    <!--右边按钮-->
+    <view class="rightview">
+       <!-- <image mode="aspectFit" src="../../imges/addChannel.png" class="addImage"></image>  -->
+    </view>
+  </view>
+  <!--顶部 分类栏目-->
+
+  <!--新闻列表-->
+  <!--scroll-y="true":垂直滚动-->
+  <!--高度：viewHeight-->
+  <!--lower-threshold：距离底部50，调用addMoreData事件-->
+  <!--下拉到底部触发addData事件，加载更多-->
+  <scroll-view scroll-y="true" style="width: 100%;height:{{viewHeight}}px" lower-threshold="50" bindscrolltolower="addMoreData">
+    <!--循环添加每一个cell内容-->
+    <block wx:for="{{detaildata}}">
+      <view class="cellClass">
+        <!--标题-->
+        <text>{{item.title}}</text>
+        <!--图片-->
+        <view class="imageClass" hidden="{{!item.has_image}}">
+          <image class="imageshow" src="{{item.image_list[0].url}}" mode="scaleToFill"></image>
+          <image class="imageshow" src="{{item.image_list[1].url}}"></image>
+          <image class="imageshow" src="{{item.image_list[2].url}}"></image>
+        </view>
+
+        <!--评论时间栏目-->
+        <view class="cellbottomClass">
+          <text style="margin-right:10rpx">{{item.comment_count}}评论</text>
+          <text>{{item.publish_time}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <!--新闻列表-->
+</view>
